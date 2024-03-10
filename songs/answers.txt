@@ -1,0 +1,7 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+   Three values would represent the audio aura of the songs by taking the values of the three averages with: SELECT AVG (energy), AVG (valence), and AVG (danceability) FROM songs; similarly, three values representing red, green, and blue represent a colour.
+
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+    A user who only plays music with energy, valence, and danceability values of 0.5 would have the same auditory experience as a user who plays music with a wide range of energy, valence, and danceability values but ultimately achieves an average of 0.5 for each.
+
+    Consequently, it might be more accurate to depict their musical preferences by using six values instead of just three: the standard deviations of each of the energy, valence, and danceability averages.
