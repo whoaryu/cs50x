@@ -1,0 +1,31 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Its performance in the sorted file, however, was extremely quick, indicating that it is most likely bubble because when sorted, it only needs to check the sequence once because swaps are not required.
+
+sort2 uses: Merge Sort
+
+How do you know?: I know because it handles long sequences so well, it's likely merge, as its times were the fastest and most stable even for the largest files.
+
+sort3 uses: Selection Sort
+
+How do you know?: We know it by omission, and its times were very consistent, demonstrating that it doesn't care if the data is sorted or not; it only needs a certain number of steps to arrive at the conclusion that the data is sorted; however, it was slower than sort2, indicating that it is not a merge sort.
+
+times (real times):
+
+sort1:
+
+random50000 = 6.805s
+reversed50000 = 6.121s
+sorted50000 = 1.295s
+
+sort2:
+
+random50000 = 1.324s
+reversed50000 = 1.605s
+sorted50000 = 1.754s
+
+sort3:
+
+random50000 = 2.685s
+reversed50000 = 3.104s
+sorted50000 = 3.198s

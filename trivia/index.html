@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            function checkAnswer(button, selectedAnswer)
+            {
+                const correctAnswer = 'a2';
+                if (selectedAnswer === correctAnswer)
+                {
+                    button.style.backgroundColor = 'green';
+                    document.getElementById('feedback').innerText = 'Correct!';
+                }
+                else{
+                    button.style.backgroundColor = 'red';
+                    document.getElementById('feedback').innerText = 'Incorrect';
+                }
+                disableAllButtons();
+            }
+            function disableAllButtons()
+            {
+              const buttons = document.querySelectorAll('button');
+              buttons.forEach(button => button.disabled = true);
+            }
+            function checkAnsaaa() {
+            var userAnswer = document.getElementById('userAnswer').value.toLowerCase();
+            var feedback = document.getElementById('feedback');
+
+            if (userAnswer === 'mauru') {
+                document.getElementById('userAnswer').style.backgroundColor = '#7FFF7F'; // Green
+                feedback.innerHTML = 'Correct!';
+                feedback.style.color = '#4CAF50'; // Dark Green
+            } else {
+                document.getElementById('userAnswer').style.backgroundColor = '#FF7F7F'; // Red
+                feedback.innerHTML = 'Incorrect';
+                feedback.style.color = '#FF3333'; // Dark Red
+            }
+        }
+          </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Who commanded the ‘Hector’, the first British trading ship to land at Surat?</h3>
+                <button onclick="checkAnswer(this, 'a1')">Paul Canning</button>
+                <button onclick="checkAnswer(this, 'a2')">William Hawkins</button>
+                <button onclick="checkAnswer(this, 'a3')">Thomas Roe</button>
+                <button onclick="checkAnswer(this, 'a4')">James Lancaster</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>Name the country which has no capital.</h3>
+                <label for="answer"></label>
+                <input type="text" id="userAnswer" placeholder="Type your answer..." name="answer">
+                <button onclick="checkAnsaaa()">Check Answer</button>
+                <div id="feedback"></div>
+            </div>
+        </div>
+    </body>
+</html>
